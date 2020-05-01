@@ -7,21 +7,24 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_lives"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
         android:text="Lives: 3"
-        android:id="@+id/tv_lives"
         android:textSize="9pt"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="150dp"
+        android:background="@drawable/circle"
+        android:gravity="center"
         android:text="Start"
         android:textColor="#000"
         android:textSize="18pt"
@@ -30,7 +33,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tv_message"
         android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
         android:layout_height="wrap_content"
         android:text="Is the number a multiple of three?"
         android:textSize="9pt"
@@ -39,21 +44,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_yes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_check_black_24dp"
+        android:src="@drawable/circle_yes"
         android:text="Yes"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_no"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_no"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_close_black_24dp"
+        android:src="@drawable/circle_no"
         android:text="No"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_yes"
